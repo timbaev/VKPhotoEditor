@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8EEC24A626354A1100320109 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEC24A526354A1100320109 /* AppDelegate.swift */; };
+		8EEC24A826354A1100320109 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEC24A726354A1100320109 /* SceneDelegate.swift */; };
+		8EEC24AA26354A1100320109 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEC24A926354A1100320109 /* ViewController.swift */; };
+		8EEC24AD26354A1100320109 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EEC24AB26354A1100320109 /* Main.storyboard */; };
+		8EEC24AF26354A1300320109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EEC24AE26354A1300320109 /* Assets.xcassets */; };
+		8EEC24B226354A1300320109 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EEC24B026354A1300320109 /* LaunchScreen.storyboard */; };
+		8EEC24BF26354B3600320109 /* AttachmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEC24BC26354B3600320109 /* AttachmentType.swift */; };
+		8EEC24C026354B3600320109 /* DefaultAttachmentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEC24BD26354B3600320109 /* DefaultAttachmentHandler.swift */; };
+		8EEC24C126354B3600320109 /* AttachmentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEC24BE26354B3600320109 /* AttachmentHandler.swift */; };
+		8EEC24C526354C4D00320109 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEC24C426354C4D00320109 /* Dependencies.swift */; };
+		A95E6724843464E6CD0BDC13 /* Pods_VKPhotoEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE8359BFA5C2805432A2365 /* Pods_VKPhotoEditor.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01C82C05968AB2517EEF0EC2 /* Pods-VKPhotoEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKPhotoEditor.debug.xcconfig"; path = "Target Support Files/Pods-VKPhotoEditor/Pods-VKPhotoEditor.debug.xcconfig"; sourceTree = "<group>"; };
+		5DE8359BFA5C2805432A2365 /* Pods_VKPhotoEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKPhotoEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EEC24A226354A1100320109 /* VKPhotoEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKPhotoEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EEC24A526354A1100320109 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8EEC24A726354A1100320109 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8EEC24A926354A1100320109 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8EEC24AC26354A1100320109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8EEC24AE26354A1300320109 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8EEC24B126354A1300320109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8EEC24B326354A1300320109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EEC24BC26354B3600320109 /* AttachmentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentType.swift; sourceTree = "<group>"; };
+		8EEC24BD26354B3600320109 /* DefaultAttachmentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultAttachmentHandler.swift; sourceTree = "<group>"; };
+		8EEC24BE26354B3600320109 /* AttachmentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentHandler.swift; sourceTree = "<group>"; };
+		8EEC24C426354C4D00320109 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		B2822FBDC7F37829CDCCD618 /* Pods-VKPhotoEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKPhotoEditor.release.xcconfig"; path = "Target Support Files/Pods-VKPhotoEditor/Pods-VKPhotoEditor.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8EEC249F26354A1100320109 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A95E6724843464E6CD0BDC13 /* Pods_VKPhotoEditor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87782A2D9EC3D3D298A5D4D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DE8359BFA5C2805432A2365 /* Pods_VKPhotoEditor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EEC249926354A1000320109 = {
+			isa = PBXGroup;
+			children = (
+				8EEC24A426354A1100320109 /* VKPhotoEditor */,
+				8EEC24A326354A1100320109 /* Products */,
+				90AD840A4BB08FB0BF2E86D2 /* Pods */,
+				87782A2D9EC3D3D298A5D4D2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8EEC24A326354A1100320109 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EEC24A226354A1100320109 /* VKPhotoEditor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EEC24A426354A1100320109 /* VKPhotoEditor */ = {
+			isa = PBXGroup;
+			children = (
+				8EEC24C326354C3C00320109 /* Configuration */,
+				8EEC24BA26354B2F00320109 /* Tools */,
+				8EEC24A526354A1100320109 /* AppDelegate.swift */,
+				8EEC24A726354A1100320109 /* SceneDelegate.swift */,
+				8EEC24A926354A1100320109 /* ViewController.swift */,
+				8EEC24AB26354A1100320109 /* Main.storyboard */,
+				8EEC24AE26354A1300320109 /* Assets.xcassets */,
+				8EEC24B026354A1300320109 /* LaunchScreen.storyboard */,
+				8EEC24B326354A1300320109 /* Info.plist */,
+			);
+			path = VKPhotoEditor;
+			sourceTree = "<group>";
+		};
+		8EEC24BA26354B2F00320109 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				8EEC24BB26354B3600320109 /* AttachmentHandler */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		8EEC24BB26354B3600320109 /* AttachmentHandler */ = {
+			isa = PBXGroup;
+			children = (
+				8EEC24BC26354B3600320109 /* AttachmentType.swift */,
+				8EEC24BD26354B3600320109 /* DefaultAttachmentHandler.swift */,
+				8EEC24BE26354B3600320109 /* AttachmentHandler.swift */,
+			);
+			path = AttachmentHandler;
+			sourceTree = "<group>";
+		};
+		8EEC24C326354C3C00320109 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				8EEC24C426354C4D00320109 /* Dependencies.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		90AD840A4BB08FB0BF2E86D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01C82C05968AB2517EEF0EC2 /* Pods-VKPhotoEditor.debug.xcconfig */,
+				B2822FBDC7F37829CDCCD618 /* Pods-VKPhotoEditor.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8EEC24A126354A1100320109 /* VKPhotoEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EEC24B626354A1300320109 /* Build configuration list for PBXNativeTarget "VKPhotoEditor" */;
+			buildPhases = (
+				9C70893F8AD98AE2D8E6F398 /* [CP] Check Pods Manifest.lock */,
+				8EEC249E26354A1100320109 /* Sources */,
+				8EEC249F26354A1100320109 /* Frameworks */,
+				8EEC24A026354A1100320109 /* Resources */,
+				58D726BC79DF9B12A9523B7A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VKPhotoEditor;
+			productName = VKPhotoEditor;
+			productReference = 8EEC24A226354A1100320109 /* VKPhotoEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8EEC249A26354A1100320109 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					8EEC24A126354A1100320109 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 8EEC249D26354A1100320109 /* Build configuration list for PBXProject "VKPhotoEditor" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8EEC249926354A1000320109;
+			productRefGroup = 8EEC24A326354A1100320109 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8EEC24A126354A1100320109 /* VKPhotoEditor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8EEC24A026354A1100320109 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EEC24B226354A1300320109 /* LaunchScreen.storyboard in Resources */,
+				8EEC24AF26354A1300320109 /* Assets.xcassets in Resources */,
+				8EEC24AD26354A1100320109 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58D726BC79DF9B12A9523B7A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VKPhotoEditor/Pods-VKPhotoEditor-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VKPhotoEditor/Pods-VKPhotoEditor-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VKPhotoEditor/Pods-VKPhotoEditor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C70893F8AD98AE2D8E6F398 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VKPhotoEditor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8EEC249E26354A1100320109 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EEC24C526354C4D00320109 /* Dependencies.swift in Sources */,
+				8EEC24AA26354A1100320109 /* ViewController.swift in Sources */,
+				8EEC24C126354B3600320109 /* AttachmentHandler.swift in Sources */,
+				8EEC24A626354A1100320109 /* AppDelegate.swift in Sources */,
+				8EEC24BF26354B3600320109 /* AttachmentType.swift in Sources */,
+				8EEC24C026354B3600320109 /* DefaultAttachmentHandler.swift in Sources */,
+				8EEC24A826354A1100320109 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8EEC24AB26354A1100320109 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EEC24AC26354A1100320109 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8EEC24B026354A1300320109 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EEC24B126354A1300320109 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8EEC24B426354A1300320109 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8EEC24B526354A1300320109 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8EEC24B726354A1300320109 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01C82C05968AB2517EEF0EC2 /* Pods-VKPhotoEditor.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VKPhotoEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.timbaev.VKPhotoEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8EEC24B826354A1300320109 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2822FBDC7F37829CDCCD618 /* Pods-VKPhotoEditor.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VKPhotoEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.timbaev.VKPhotoEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8EEC249D26354A1100320109 /* Build configuration list for PBXProject "VKPhotoEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EEC24B426354A1300320109 /* Debug */,
+				8EEC24B526354A1300320109 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EEC24B626354A1300320109 /* Build configuration list for PBXNativeTarget "VKPhotoEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EEC24B726354A1300320109 /* Debug */,
+				8EEC24B826354A1300320109 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8EEC249A26354A1100320109 /* Project object */;
+}
