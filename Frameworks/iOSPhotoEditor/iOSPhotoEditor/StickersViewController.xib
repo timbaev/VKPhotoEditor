@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17701"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StickersViewController" customModule="iOSPhotoEditor" customModuleProvider="target">
             <connections>
+                <outlet property="collectionContainerView" destination="kVE-8B-7Md" id="KcI-3k-kGF"/>
                 <outlet property="headerView" destination="Jqb-lC-sL5" id="2Bt-iO-hyv"/>
                 <outlet property="holdView" destination="caC-0e-fET" id="T8J-gB-ag8"/>
-                <outlet property="pageControl" destination="fPm-Rj-wEI" id="wow-uc-U80"/>
-                <outlet property="scrollView" destination="389-Pb-g4p" id="EiN-Xe-ZxU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,31 +31,27 @@
                                 <constraint firstAttribute="height" constant="5" id="uq0-60-mnE"/>
                             </constraints>
                         </view>
-                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fPm-Rj-wEI">
-                            <rect key="frame" x="168" y="13" width="39" height="37"/>
-                        </pageControl>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="caC-0e-fET" firstAttribute="top" secondItem="Jqb-lC-sL5" secondAttribute="top" constant="8" id="S62-GD-S5G"/>
                         <constraint firstAttribute="height" constant="40" id="Tl2-jg-Adq"/>
-                        <constraint firstItem="fPm-Rj-wEI" firstAttribute="centerX" secondItem="Jqb-lC-sL5" secondAttribute="centerX" id="jKc-Hd-3e8"/>
-                        <constraint firstItem="fPm-Rj-wEI" firstAttribute="top" secondItem="caC-0e-fET" secondAttribute="bottom" id="oH1-Ez-1Ze"/>
                         <constraint firstItem="caC-0e-fET" firstAttribute="centerX" secondItem="Jqb-lC-sL5" secondAttribute="centerX" id="qvF-zt-xDj"/>
                     </constraints>
                 </view>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="389-Pb-g4p">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVE-8B-7Md">
                     <rect key="frame" x="0.0" y="40" width="375" height="627"/>
-                </scrollView>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="kVE-8B-7Md" secondAttribute="trailing" id="17S-iI-6to"/>
                 <constraint firstItem="Jqb-lC-sL5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="534-wp-qUu"/>
-                <constraint firstAttribute="bottom" secondItem="389-Pb-g4p" secondAttribute="bottom" id="alT-c1-6ub"/>
-                <constraint firstItem="389-Pb-g4p" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eu1-LX-lYG"/>
+                <constraint firstAttribute="bottom" secondItem="kVE-8B-7Md" secondAttribute="bottom" id="IoK-TI-Knc"/>
+                <constraint firstItem="kVE-8B-7Md" firstAttribute="top" secondItem="Jqb-lC-sL5" secondAttribute="bottom" id="JUl-Ye-zOh"/>
                 <constraint firstItem="Jqb-lC-sL5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fvh-Gm-lz3"/>
-                <constraint firstAttribute="trailing" secondItem="389-Pb-g4p" secondAttribute="trailing" id="gLR-A6-iQ1"/>
-                <constraint firstItem="389-Pb-g4p" firstAttribute="top" secondItem="Jqb-lC-sL5" secondAttribute="bottom" id="iQj-xf-VZX"/>
+                <constraint firstItem="kVE-8B-7Md" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mgD-0j-4Tx"/>
                 <constraint firstAttribute="trailing" secondItem="Jqb-lC-sL5" secondAttribute="trailing" id="tYL-lr-Vzj"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

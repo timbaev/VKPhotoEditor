@@ -11,10 +11,8 @@ import UIKit
 class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var holdView: UIView!
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var pageControl: UIPageControl!
-    
-    var collectioView: UICollectionView!
+    @IBOutlet weak var collectionContainerView: UIView!
+
     var emojisCollectioView: UICollectionView!
     
     var emojisDelegate: EmojisCollectionViewDelegate!
@@ -34,12 +32,6 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         
         configureCollectionViews()
-        scrollView.contentSize = CGSize(width: 2.0 * screenSize.width,
-                                        height: scrollView.frame.size.height)
-        
-        scrollView.isPagingEnabled = true
-        scrollView.delegate = self
-        pageControl.numberOfPages = 2
         
         holdView.layer.cornerRadius = 3
         let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(StickersViewController.panGesture))
@@ -48,42 +40,14 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func configureCollectionViews() {
-        
-        let frame = CGRect(x: 0,
-                           y: 0,
-                           width: UIScreen.main.bounds.width,
-                           height: view.frame.height - 40)
-        
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-        let width = (CGFloat) ((screenSize.width - 30) / 3.0)
-        layout.itemSize = CGSize(width: width, height: 100)
-        
-        collectioView = UICollectionView(frame: frame, collectionViewLayout: layout)
-        collectioView.backgroundColor = .clear
-        scrollView.addSubview(collectioView)
-        
-        collectioView.delegate = self
-        collectioView.dataSource = self
-        
-        collectioView.register(
-            UINib(nibName: "StickerCollectionViewCell", bundle: Bundle(for: StickerCollectionViewCell.self)),
-            forCellWithReuseIdentifier: "StickerCollectionViewCell")
-        
-        //-----------------------------------
-        
-        let emojisFrame = CGRect(x: scrollView.frame.size.width,
-                                 y: 0,
-                                 width: UIScreen.main.bounds.width,
-                                 height: view.frame.height - 40)
-        
         let emojislayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         emojislayout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
         emojislayout.itemSize = CGSize(width: 70, height: 70)
         
-        emojisCollectioView = UICollectionView(frame: emojisFrame, collectionViewLayout: emojislayout)
+        emojisCollectioView = UICollectionView(frame: .zero, collectionViewLayout: emojislayout)
+        emojisCollectioView.translatesAutoresizingMaskIntoConstraints = false
         emojisCollectioView.backgroundColor = .clear
-        scrollView.addSubview(emojisCollectioView)
+        collectionContainerView.addSubview(emojisCollectioView)
         emojisDelegate = EmojisCollectionViewDelegate()
         emojisDelegate.stickersViewControllerDelegate = stickersViewControllerDelegate
         emojisCollectioView.delegate = emojisDelegate
@@ -92,7 +56,13 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
         emojisCollectioView.register(
             UINib(nibName: "EmojiCollectionViewCell", bundle: Bundle(for: EmojiCollectionViewCell.self)),
             forCellWithReuseIdentifier: "EmojiCollectionViewCell")
-        
+
+        NSLayoutConstraint.activate([
+            emojisCollectioView.topAnchor.constraint(equalTo: collectionContainerView.topAnchor),
+            emojisCollectioView.leadingAnchor.constraint(equalTo: collectionContainerView.leadingAnchor),
+            emojisCollectioView.bottomAnchor.constraint(equalTo: collectionContainerView.bottomAnchor),
+            emojisCollectioView.trailingAnchor.constraint(equalTo: collectionContainerView.trailingAnchor)
+        ])
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -111,26 +81,6 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
                                      width: frame.width,
                                      height: UIScreen.main.bounds.height - self.partialView)
         }
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        collectioView.frame = CGRect(x: 0,
-                                     y: 0,
-                                     width: UIScreen.main.bounds.width,
-                                     height: view.frame.height - 40)
-        
-        emojisCollectioView.frame = CGRect(x: scrollView.frame.size.width,
-                                           y: 0,
-                                           width: UIScreen.main.bounds.width,
-                                           height: view.frame.height - 40)
-        
-        scrollView.contentSize = CGSize(width: 2.0 * screenSize.width,
-                                        height: scrollView.frame.size.height)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     //MARK: Pan Gesture
@@ -199,18 +149,6 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
         bluredView.frame = UIScreen.main.bounds
         view.insertSubview(bluredView, at: 0)
     }
-    
-    
-    
-}
-
-extension StickersViewController: UIScrollViewDelegate {
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let pageWidth = scrollView.bounds.width
-        let pageFraction = scrollView.contentOffset.x / pageWidth
-        self.pageControl.currentPage = Int(round(pageFraction))
-    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -242,6 +180,4 @@ extension StickersViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-    
 }
-
