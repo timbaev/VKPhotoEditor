@@ -23,6 +23,19 @@ public enum control {
 extension PhotoEditorViewController {
 
      //MARK: Top Toolbar
+
+    @IBAction func addImageButtonTapped(_ sender: UIButton) {
+        attachmentHandler.onImageSelected = { [weak self] image, filename in
+            self?.didSelectImage(image: image)
+        }
+
+        attachmentHandler.showAttachmentActionSheet(
+            from: self,
+            title: nil,
+            message: nil,
+            availableAttachments: [.camera, .photoLibrary]
+        )
+    }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         photoEditorDelegate?.canceledEditing()

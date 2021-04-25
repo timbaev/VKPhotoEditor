@@ -10,7 +10,7 @@ import MobileCoreServices
 import AVFoundation
 import Photos
 
-final class DefaultAttachmentHandler: NSObject, AttachmentHandler {
+public class DefaultAttachmentHandler: NSObject, AttachmentHandler {
 
     // MARK: - Instance Properties
 
@@ -18,9 +18,9 @@ final class DefaultAttachmentHandler: NSObject, AttachmentHandler {
 
     // MARK: -
 
-    var onImageSelected: ((UIImage, String?) -> Void)?
-    var onVideoSelected: ((URL) -> Void)?
-    var onFilesSelected: (([URL]) -> Void)?
+    public var onImageSelected: ((UIImage, String?) -> Void)?
+    public var onVideoSelected: ((URL) -> Void)?
+    public var onFilesSelected: (([URL]) -> Void)?
 
     // MARK: - Instance Methods
 
@@ -193,7 +193,7 @@ final class DefaultAttachmentHandler: NSObject, AttachmentHandler {
     // MARK: - AttachmentHandler
 
     /// This function is used to show the attachment sheet for image, video, photo and file.
-    func showAttachmentActionSheet(
+    public func showAttachmentActionSheet(
         from viewController: UIViewController,
         title: String?,
         message: String?,
@@ -243,11 +243,11 @@ extension DefaultAttachmentHandler: UIImagePickerControllerDelegate, UINavigatio
 
     // MARK: - Instance Methods
 
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.currentViewController?.dismiss(animated: true)
     }
 
-    func imagePickerController(
+    public func imagePickerController(
         _ picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
     ) {
@@ -264,11 +264,11 @@ extension DefaultAttachmentHandler: UIDocumentPickerDelegate {
 
     // MARK: - Instance Methods
 
-    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+    public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         self.onFilesSelected?(urls)
     }
 
-    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+    public func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
         self.currentViewController?.dismiss(animated: true)
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import VKPhotoEditorTools
 
 enum Dependencies {
 

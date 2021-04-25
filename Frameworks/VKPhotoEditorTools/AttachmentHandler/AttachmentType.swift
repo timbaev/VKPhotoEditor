@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AttachmentType: String, CaseIterable {
+public enum AttachmentType: String, CaseIterable {
 
     // MARK: - Enumeration Cases
 

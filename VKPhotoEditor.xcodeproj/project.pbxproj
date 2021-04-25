@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,6 @@
 		8EEC24AD26354A1100320109 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EEC24AB26354A1100320109 /* Main.storyboard */; };
 		8EEC24AF26354A1300320109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EEC24AE26354A1300320109 /* Assets.xcassets */; };
 		8EEC24B226354A1300320109 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EEC24B026354A1300320109 /* LaunchScreen.storyboard */; };
-		8EEC24BF26354B3600320109 /* AttachmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEC24BC26354B3600320109 /* AttachmentType.swift */; };
-		8EEC24C026354B3600320109 /* DefaultAttachmentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEC24BD26354B3600320109 /* DefaultAttachmentHandler.swift */; };
-		8EEC24C126354B3600320109 /* AttachmentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEC24BE26354B3600320109 /* AttachmentHandler.swift */; };
 		8EEC24C526354C4D00320109 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEC24C426354C4D00320109 /* Dependencies.swift */; };
 		A95E6724843464E6CD0BDC13 /* Pods_VKPhotoEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE8359BFA5C2805432A2365 /* Pods_VKPhotoEditor.framework */; };
 /* End PBXBuildFile section */
@@ -31,9 +28,6 @@
 		8EEC24AE26354A1300320109 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EEC24B126354A1300320109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EEC24B326354A1300320109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8EEC24BC26354B3600320109 /* AttachmentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentType.swift; sourceTree = "<group>"; };
-		8EEC24BD26354B3600320109 /* DefaultAttachmentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultAttachmentHandler.swift; sourceTree = "<group>"; };
-		8EEC24BE26354B3600320109 /* AttachmentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentHandler.swift; sourceTree = "<group>"; };
 		8EEC24C426354C4D00320109 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		B2822FBDC7F37829CDCCD618 /* Pods-VKPhotoEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKPhotoEditor.release.xcconfig"; path = "Target Support Files/Pods-VKPhotoEditor/Pods-VKPhotoEditor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				8EEC24C326354C3C00320109 /* Configuration */,
-				8EEC24BA26354B2F00320109 /* Tools */,
 				8EEC24A526354A1100320109 /* AppDelegate.swift */,
 				8EEC24A726354A1100320109 /* SceneDelegate.swift */,
 				8EEC24A926354A1100320109 /* ViewController.swift */,
@@ -90,24 +83,6 @@
 				8EEC24B326354A1300320109 /* Info.plist */,
 			);
 			path = VKPhotoEditor;
-			sourceTree = "<group>";
-		};
-		8EEC24BA26354B2F00320109 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				8EEC24BB26354B3600320109 /* AttachmentHandler */,
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
-		8EEC24BB26354B3600320109 /* AttachmentHandler */ = {
-			isa = PBXGroup;
-			children = (
-				8EEC24BC26354B3600320109 /* AttachmentType.swift */,
-				8EEC24BD26354B3600320109 /* DefaultAttachmentHandler.swift */,
-				8EEC24BE26354B3600320109 /* AttachmentHandler.swift */,
-			);
-			path = AttachmentHandler;
 			sourceTree = "<group>";
 		};
 		8EEC24C326354C3C00320109 /* Configuration */ = {
@@ -124,7 +99,6 @@
 				01C82C05968AB2517EEF0EC2 /* Pods-VKPhotoEditor.debug.xcconfig */,
 				B2822FBDC7F37829CDCCD618 /* Pods-VKPhotoEditor.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -244,10 +218,7 @@
 			files = (
 				8EEC24C526354C4D00320109 /* Dependencies.swift in Sources */,
 				8EEC24AA26354A1100320109 /* ViewController.swift in Sources */,
-				8EEC24C126354B3600320109 /* AttachmentHandler.swift in Sources */,
 				8EEC24A626354A1100320109 /* AppDelegate.swift in Sources */,
-				8EEC24BF26354B3600320109 /* AttachmentType.swift in Sources */,
-				8EEC24C026354B3600320109 /* DefaultAttachmentHandler.swift in Sources */,
 				8EEC24A826354A1100320109 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

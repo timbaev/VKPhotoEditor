@@ -19,4 +19,6 @@ with the ability to scale and rotate objects
   s.exclude_files = ""
   s.resources = "iOSPhotoEditor/**/*.{png,jpeg,jpg,storyboard,xib,ttf}"
 
+  s.dependency 'VKPhotoEditorTools'
+
 end

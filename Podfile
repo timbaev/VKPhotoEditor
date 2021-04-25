@@ -5,4 +5,5 @@ target 'VKPhotoEditor' do
   platform :ios, '14.0'
 
   pod 'iOSPhotoEditor', path: './Frameworks/iOSPhotoEditor'
+  pod 'VKPhotoEditorTools', path: './Frameworks/VKPhotoEditorTools'
 end

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import VKPhotoEditorTools
 
 public final class PhotoEditorViewController: UIViewController {
     
@@ -71,6 +72,10 @@ public final class PhotoEditorViewController: UIViewController {
     
     
     var stickersViewController: StickersViewController!
+
+    lazy var attachmentHandler: AttachmentHandler = {
+        DefaultAttachmentHandler()
+    }()
 
     //Register Custom font before we load XIB
     public override func loadView() {

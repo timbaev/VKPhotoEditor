@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol AttachmentHandler: AnyObject {
+public protocol AttachmentHandler: AnyObject {
 
     // MARK: - Instance Properties
 
@@ -31,7 +31,7 @@ extension AttachmentHandler {
 
     // MARK: - Instance Methods
 
-    func showAttachmentActionSheet(from viewController: UIViewController) {
+    public func showAttachmentActionSheet(from viewController: UIViewController) {
         self.showAttachmentActionSheet(
             from: viewController,
             title: .actionFileTypeHeading,
@@ -40,7 +40,10 @@ extension AttachmentHandler {
         )
     }
 
-    func showAttachmentActionSheet(from viewController: UIViewController, availableAttachments: Set<AttachmentType>) {
+    public func showAttachmentActionSheet(
+        from viewController: UIViewController,
+        availableAttachments: Set<AttachmentType>
+    ) {
         self.showAttachmentActionSheet(
             from: viewController,
             title: .actionFileTypeHeading,

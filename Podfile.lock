@@ -1,16 +1,22 @@
 PODS:
-  - iOSPhotoEditor (1.0.0)
+  - iOSPhotoEditor (1.0.0):
+    - VKPhotoEditorTools
+  - VKPhotoEditorTools (1.0)
 
 DEPENDENCIES:
   - iOSPhotoEditor (from `./Frameworks/iOSPhotoEditor`)
+  - VKPhotoEditorTools (from `./Frameworks/VKPhotoEditorTools`)
 
 EXTERNAL SOURCES:
   iOSPhotoEditor:
     :path: "./Frameworks/iOSPhotoEditor"
+  VKPhotoEditorTools:
+    :path: "./Frameworks/VKPhotoEditorTools"
 
 SPEC CHECKSUMS:
-  iOSPhotoEditor: bcd88c5497ba05b89b5dabdb463b54c8f76628d7
+  iOSPhotoEditor: 412403cde7f19466365fa864397c9f6fb98ffe3c
+  VKPhotoEditorTools: 707e755a8510d0eab70374525b0e8c3dfd95042d
 
-PODFILE CHECKSUM: e7798ec5c412205ad3ab3ff9a971f239f60a21b0
+PODFILE CHECKSUM: 40ccf80ecd7bc5288cf3238f5310ccc9c1bcd901
 
 COCOAPODS: 1.10.0
