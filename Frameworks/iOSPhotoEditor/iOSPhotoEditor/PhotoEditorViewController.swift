@@ -92,7 +92,8 @@ public final class PhotoEditorViewController: UIViewController {
     var activeTextView: UITextView?
     var imageViewToPan: UIImageView?
     var isTyping: Bool = false
-    var originalImage: UIImage?
+    var croppedImage: UIImage?
+    var currentFilter: Filter?
     
     var stickersViewController: StickersViewController!
 
@@ -109,8 +110,6 @@ public final class PhotoEditorViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         self.setImageView(image: image!)
-
-        originalImage = image
         
         deleteView.layer.cornerRadius = deleteView.bounds.height / 2
         deleteView.layer.borderWidth = 2.0

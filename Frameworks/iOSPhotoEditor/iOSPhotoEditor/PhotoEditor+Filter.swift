@@ -25,16 +25,20 @@ extension PhotoEditorViewController {
     // MARK: -
 
     func apply(filter: Filter) {
+        currentFilter = filter
+
         activityIndicatorView.isHidden = false
         activityIndicatorView.startAnimating()
 
+        let currentImage = croppedImage ?? image
+
         DispatchQueue.global().async {
             if let applier = filter.applier,
-               let ciImage = self.originalImage?.asCIImage,
+               let ciImage = currentImage?.asCIImage,
                let modifiedImage = applier(ciImage) {
                 self.updateImage(modifiedImage.uiImage)
             } else {
-                self.updateImage(self.originalImage)
+                self.updateImage(currentImage)
             }
         }
     }
