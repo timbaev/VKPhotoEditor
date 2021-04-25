@@ -19,6 +19,8 @@ public final class PhotoEditorViewController: UIViewController {
     //To hold the drawings and stickers
     @IBOutlet weak var canvasImageView: UIImageView!
 
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+
     @IBOutlet weak var topToolbar: UIView!
     @IBOutlet weak var bottomToolbar: UIView!
 
@@ -51,6 +53,27 @@ public final class PhotoEditorViewController: UIViewController {
     public var colors  : [UIColor] = []
     
     public var photoEditorDelegate: PhotoEditorDelegate?
+
+    public var filters: [Filter] = [
+        Filter(name: "Без фильтра", applier: nil),
+        Filter(name: "Nashville", applier: Filter.nashvilleFilter),
+        Filter(name: "Toaster", applier: Filter.toasterFilter),
+        Filter(name: "1977", applier: Filter.apply1977Filter),
+        Filter(name: "Clarendon", applier: Filter.clarendonFilter),
+        Filter(name: "HazeRemoval", applier: Filter.hazeRemovalFilter),
+        Filter(name: "Chrome", coreImageFilterName: "CIPhotoEffectChrome"),
+        Filter(name: "Fade", coreImageFilterName: "CIPhotoEffectFade"),
+        Filter(name: "Instant", coreImageFilterName: "CIPhotoEffectInstant"),
+        Filter(name: "Mono", coreImageFilterName: "CIPhotoEffectMono"),
+        Filter(name: "Noir", coreImageFilterName: "CIPhotoEffectNoir"),
+        Filter(name: "Process", coreImageFilterName: "CIPhotoEffectProcess"),
+        Filter(name: "Tonal", coreImageFilterName: "CIPhotoEffectTonal"),
+        Filter(name: "Transfer", coreImageFilterName: "CIPhotoEffectTransfer"),
+        Filter(name: "Tone", coreImageFilterName: "CILinearToSRGBToneCurve"),
+        Filter(name: "Linear", coreImageFilterName: "CISRGBToneCurveToLinear"),
+        Filter(name: "Sepia", coreImageFilterName: "CISepiaTone")
+    ]
+
     var colorsCollectionViewDelegate: ColorsCollectionViewDelegate!
     
     // list of controls to be hidden
@@ -69,7 +92,7 @@ public final class PhotoEditorViewController: UIViewController {
     var activeTextView: UITextView?
     var imageViewToPan: UIImageView?
     var isTyping: Bool = false
-    
+    var originalImage: UIImage?
     
     var stickersViewController: StickersViewController!
 
@@ -86,6 +109,8 @@ public final class PhotoEditorViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         self.setImageView(image: image!)
+
+        originalImage = image
         
         deleteView.layer.cornerRadius = deleteView.bounds.height / 2
         deleteView.layer.borderWidth = 2.0

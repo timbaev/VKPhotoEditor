@@ -15,6 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoEditorViewController" customModule="iOSPhotoEditor" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicatorView" destination="MDI-YJ-rPR" id="4ZG-gB-dWe"/>
                 <outlet property="bottomGradient" destination="ZGa-1B-gkO" id="pYn-g8-ak7"/>
                 <outlet property="bottomToolbar" destination="87h-1G-t5q" id="Pzi-Dw-qOq"/>
                 <outlet property="canvasImageView" destination="n3p-yR-4xc" id="OED-1L-YMz"/>
@@ -81,7 +82,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Doi-2Z-r5q">
-                            <rect key="frame" x="192" y="0.0" width="210" height="60"/>
+                            <rect key="frame" x="147" y="0.0" width="255" height="60"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i65-NA-QMn">
                                     <rect key="frame" x="0.0" y="15" width="30" height="30"/>
@@ -89,13 +90,24 @@
                                         <constraint firstAttribute="height" constant="30" id="YXz-0B-RV5"/>
                                         <constraint firstAttribute="width" constant="30" id="rfE-L1-lwG"/>
                                     </constraints>
+                                    <state key="normal" image="Filters.png"/>
+                                    <connections>
+                                        <action selector="filterButtonTapped:" destination="-1" eventType="touchUpInside" id="N66-YO-Qvg"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUS-TN-RT7">
+                                    <rect key="frame" x="45" y="15" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="i3H-Qv-cd0"/>
+                                        <constraint firstAttribute="width" constant="30" id="p6i-JH-tDd"/>
+                                    </constraints>
                                     <state key="normal" image="Image.png"/>
                                     <connections>
-                                        <action selector="addImageButtonTapped:" destination="-1" eventType="touchUpInside" id="c9p-y9-J36"/>
+                                        <action selector="addImageButtonTapped:" destination="-1" eventType="touchUpInside" id="Cuq-dd-O7L"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghm-bq-BmY">
-                                    <rect key="frame" x="45" y="11.666666666666664" width="30" height="37"/>
+                                    <rect key="frame" x="90" y="11.666666666666664" width="30" height="37"/>
                                     <fontDescription key="fontDescription" name="icomoon" family="icomoon" pointSize="25"/>
                                     <size key="titleShadowOffset" width="1" height="0.0"/>
                                     <state key="normal" title="">
@@ -107,7 +119,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLX-iy-2Rc">
-                                    <rect key="frame" x="90" y="15" width="30" height="30"/>
+                                    <rect key="frame" x="135" y="15" width="30" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="30" id="O2n-6j-GMN"/>
                                         <constraint firstAttribute="height" constant="30" id="yjc-rN-IPe"/>
@@ -122,7 +134,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qm4-f6-DBr">
-                                    <rect key="frame" x="135" y="11.666666666666664" width="30" height="37"/>
+                                    <rect key="frame" x="180" y="11.666666666666664" width="30" height="37"/>
                                     <fontDescription key="fontDescription" name="icomoon" family="icomoon" pointSize="25"/>
                                     <size key="titleShadowOffset" width="1" height="0.0"/>
                                     <state key="normal" title="">
@@ -134,7 +146,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wH-LJ-SyD">
-                                    <rect key="frame" x="180" y="11.666666666666664" width="30" height="37"/>
+                                    <rect key="frame" x="225" y="11.666666666666664" width="30" height="37"/>
                                     <fontDescription key="fontDescription" name="icomoon" family="icomoon" pointSize="25"/>
                                     <size key="titleShadowOffset" width="1" height="0.0"/>
                                     <state key="normal" title="">
@@ -305,6 +317,10 @@
                         <constraint firstAttribute="trailing" secondItem="GaQ-XR-asZ" secondAttribute="trailing" id="ZAL-PE-sPi"/>
                     </constraints>
                 </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MDI-YJ-rPR">
+                    <rect key="frame" x="188.66666666666666" y="429.66666666666669" width="37" height="37"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="ymm-th-TTo"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -315,9 +331,11 @@
                 <constraint firstItem="S1Y-ZS-dct" firstAttribute="leading" secondItem="HPk-Bg-V0q" secondAttribute="leading" id="2tC-2e-oA6"/>
                 <constraint firstItem="Cy8-ap-fH9" firstAttribute="leading" secondItem="HPk-Bg-V0q" secondAttribute="leading" id="6eK-mF-0OL"/>
                 <constraint firstItem="3MS-N5-3xY" firstAttribute="top" secondItem="ymm-th-TTo" secondAttribute="top" id="Fj6-PW-wbF"/>
+                <constraint firstItem="MDI-YJ-rPR" firstAttribute="centerY" secondItem="HPk-Bg-V0q" secondAttribute="centerY" id="H96-3c-mkR"/>
                 <constraint firstAttribute="trailing" secondItem="3MS-N5-3xY" secondAttribute="trailing" id="M86-Ia-XcZ"/>
                 <constraint firstItem="rLz-36-0xz" firstAttribute="top" secondItem="ymm-th-TTo" secondAttribute="top" id="RYD-1T-XNJ"/>
                 <constraint firstAttribute="trailing" secondItem="ZGa-1B-gkO" secondAttribute="trailing" id="SbH-L6-vj9"/>
+                <constraint firstItem="MDI-YJ-rPR" firstAttribute="centerX" secondItem="HPk-Bg-V0q" secondAttribute="centerX" id="UgZ-lj-iuj"/>
                 <constraint firstItem="yAt-sK-1nK" firstAttribute="centerX" secondItem="HPk-Bg-V0q" secondAttribute="centerX" id="Viz-8c-pzk"/>
                 <constraint firstItem="ymm-th-TTo" firstAttribute="bottom" secondItem="87h-1G-t5q" secondAttribute="bottom" id="XH4-oO-47L"/>
                 <constraint firstItem="ZGa-1B-gkO" firstAttribute="leading" secondItem="HPk-Bg-V0q" secondAttribute="leading" id="YYk-Vg-obo"/>
@@ -338,6 +356,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Filters.png" width="512" height="512"/>
         <image name="Image.png" width="512" height="512"/>
         <image name="Smile.png" width="512" height="512"/>
     </resources>

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreImage
 
 // MARK: - Control
 public enum control {
@@ -23,6 +24,22 @@ public enum control {
 extension PhotoEditorViewController {
 
      //MARK: Top Toolbar
+
+    @IBAction func filterButtonTapped(_ sender: UIButton) {
+        let ac = UIAlertController(title: "Применить фильтр", message: nil, preferredStyle: .actionSheet)
+
+        filters.forEach { filter in
+            ac.addAction(
+                UIAlertAction(title: filter.name, style: .default, handler: { [unowned self] action in
+                    self.apply(filter: filter)
+                })
+            )
+        }
+
+        ac.addAction(UIAlertAction(title: "Отмена", style: .cancel))
+
+        present(ac, animated: true)
+    }
 
     @IBAction func addImageButtonTapped(_ sender: UIButton) {
         attachmentHandler.onImageSelected = { [weak self] image, filename in
