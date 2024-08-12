@@ -8,3 +8,5 @@
 ```
 $ pod install --repo-update
 ```
+
+Строка, для проверки PR
